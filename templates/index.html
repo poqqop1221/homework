@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href='/static/styles/index.css'>
+		
+	
+</head>
+<body>
+	<h1>Youtube Downloder</h1>
+	<form action="/submit" method="POST">
+		<label for="">輸入網址(360p)</label>
+		<input type="text" name="url">
+		<label for="">輸入網址(720p)</label>
+		<input type="text" name="url2">
+		<button type="submit">送出</button>
+    </form>
+    {% if filename %}
+    
+    <h3><span>{{ filename}}下載完成!</span></h3>
+    {% endif %}
+    {% if filename2 %}
+       
+    <h3><span>{{ filename2 }}下載完成!</span></h3>
+    
+    {% endif %}
+</body>
+</html>
